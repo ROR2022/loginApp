@@ -40,6 +40,7 @@ const FormLogin = ({setSignup}) => {
   }
   const handleLogin = async (values) => {
     try {
+        setLoading(true);
         const response = await loginUser(values);
         console.log(response);
         //console.log('status:...',response.response.status);
